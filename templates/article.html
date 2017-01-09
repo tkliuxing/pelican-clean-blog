@@ -124,6 +124,13 @@
 {% endblock header %}
 
 {% block content %}
+
+    {% if article.toc %}
+        <nav class="toc">
+        {{ article.toc }}
+        </nav>
+    {% endif %}
+
     <!-- Post Content -->
     <article>
         {{ article.content }}
